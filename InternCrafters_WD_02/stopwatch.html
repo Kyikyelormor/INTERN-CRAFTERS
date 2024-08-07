@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOPWATCH</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <h1>STOPWATCH</h1>
+
+    <main>
+        <section id="watch-screen">
+            <div class="outer-area">
+                <div class="inner-area">
+                    <span class="count-area hrs"> 0:</span>
+                    <span class="count-area min">0:</span>
+                    <span class="count-area sec">0</span>
+                    <span class="count-area msec">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="button-area">
+            <button class="reset hide">Reset</button>
+            <!-- <button id="pause">Pause</button> -->
+            <button class="play">Play</button>
+            <button class="lap hide">Lap</button>
+        </section>
+
+        <section class="laps-container">
+
+        <ul class="laps">
+            <button class="laps-clear hide">Clear All</button>
+        </ul>
+
+    </section>
+    </main>
+
+
+    <script src="stopwatch.js"></script>
+</body>
+</html>

@@ -79,7 +79,7 @@ button{
     color: white;
     text-align: center;
     cursor: pointer;
-    transition: 1s ;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .reset:hover{

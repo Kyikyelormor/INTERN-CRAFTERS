@@ -14,14 +14,59 @@ body {
     font-family: sans-serif;
 }
 
+h1{
+    color: #f8eeee;
+    text-align: center;
+    margin: 10px;
+}
+
 main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: -30px;
+    margin: auto;
 }
 
 .outer-area{
+    position: relative;
+}
+
+.outer-area::before{
+    filter: blur(1.5rem);
+    opacity: 0.15;
+}
+
+.outer-area::after, .outer-area::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 30%, #ff4545, #23a6d5, #ee7752, #e73c7e, #00ff99, #006aff, #ff0095, #ff4785 );
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 50%;
+    padding: 3.5px;
+    animation: 2s spin linear infinite;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg
+    }
+    to{
+        --angle: 360deg
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* .outer-area{
     background-color: whitesmoke;
     width: 9rem;
     height: 9rem;
@@ -29,7 +74,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    position: relative;
+} */
 
 .inner-area{
     background-color: black;
@@ -39,6 +85,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid whitesmoke;
 }
 
 .count-area{
@@ -150,7 +197,7 @@ button{
     bottom: 50px;
     z-index: 1000;
     bottom: 0;
-    left: 50%;
+    left: 80%;
     cursor: pointer;
 }
 
